@@ -49,10 +49,39 @@ namespace SistemaUnifev
                     "Tem certeza de que deseja sair?",
                     "Confirmação",
                     MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question) == DialogResult.Yes) 
-                {
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+            {
                 Close();
-                }
             }
         }
+
+        private void horaTimer_Tick(object sender, EventArgs e)
+        {
+            // Faz a saudação de acordo com o horário do dia.
+            if (DateTime.Now.Hour < 12)
+            {
+                saudacaoToolStripStatusLabel.Text = "Bom dia! ";
+            }
+            else if (DateTime.Now.Hour >= 12 && DateTime.Now.Hour <18)
+            {
+                saudacaoToolStripStatusLabel.Text = "Boa tarde! ";
+            }
+            else
+            {
+                saudacaoToolStripStatusLabel.Text = "Boa noite! ";
+            }
+            // Exibe a data e hora atual"
+            horaToolStripStatusLabel3.Text =
+                $"{DateTime.Now.ToString("dddd")}, " +
+                $" {DateTime.Now.ToString("dd")} de " +
+                $"{DateTime.Now.ToString("MMMM")} de " +
+                $"{DateTime.Now.ToString("yyyy")} " +
+                $"{DateTime.Now.ToString("HH:mm:ss")}";
+        }
+
+        private void PrincipalForm_Shown(object sender, EventArgs e)
+        {
+            horaTimer.Start();
+        }
     }
+}

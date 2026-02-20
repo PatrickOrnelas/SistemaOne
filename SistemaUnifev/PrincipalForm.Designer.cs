@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +47,12 @@
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.saudacaoToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.horaToolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.horaTimer = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -74,8 +80,8 @@
             this.entrarToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
-            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(22, 20);
-            this.arquivoToolStripMenuItem.Text = ",";
+            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.arquivoToolStripMenuItem.Text = "Arquivo";
             // 
             // novoToolStripMenuItem
             // 
@@ -167,6 +173,10 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saudacaoToolStripStatusLabel,
+            this.toolStripStatusLabel2,
+            this.horaToolStripStatusLabel3});
             this.statusStrip1.Location = new System.Drawing.Point(0, 428);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
@@ -181,6 +191,29 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // saudacaoToolStripStatusLabel
+            // 
+            this.saudacaoToolStripStatusLabel.Name = "saudacaoToolStripStatusLabel";
+            this.saudacaoToolStripStatusLabel.Size = new System.Drawing.Size(78, 17);
+            this.saudacaoToolStripStatusLabel.Text = "Carregando...";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(16, 17);
+            this.toolStripStatusLabel2.Text = " | ";
+            // 
+            // horaToolStripStatusLabel3
+            // 
+            this.horaToolStripStatusLabel3.Name = "horaToolStripStatusLabel3";
+            this.horaToolStripStatusLabel3.Size = new System.Drawing.Size(78, 17);
+            this.horaToolStripStatusLabel3.Text = "Carregando...";
+            // 
+            // horaTimer
+            // 
+            this.horaTimer.Interval = 1000;
+            this.horaTimer.Tick += new System.EventHandler(this.horaTimer_Tick);
+            // 
             // PrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,10 +225,13 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PrincipalForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SistemaUnifev";
+            this.Text = "SistemaOne - Gerenciamento Inteligente para Negócio";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Shown += new System.EventHandler(this.PrincipalForm_Shown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,6 +257,10 @@
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel saudacaoToolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripStatusLabel horaToolStripStatusLabel3;
+        private System.Windows.Forms.Timer horaTimer;
     }
 }
 
