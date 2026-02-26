@@ -83,5 +83,17 @@ namespace SistemaUnifev
         {
             horaTimer.Start();
         }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SobreForm sobreForm = new SobreForm();
+            sobreForm.ShowDialog();
+        }
+
+        private void alunosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AlunoListarForm alunoListarForm = new AlunoListarForm();
+            alunoListarForm.ShowDialog();
+        }
     }
 }
