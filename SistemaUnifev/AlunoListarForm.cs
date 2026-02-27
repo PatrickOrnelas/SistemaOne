@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemaUnifev.Mapeamento;
+using SistemaUnifev.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,18 @@ namespace SistemaUnifev
         public AlunoListarForm()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void listarButton_Click(object sender, EventArgs e)
+        {
+            AlunoDAO alunoDAO = new AlunoDAO();
+            List<Aluno> alunos = alunoDAO.ListarFake(30);
+            dataGridView1.DataSource = alunos;
         }
     }
 }
