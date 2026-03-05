@@ -47,6 +47,11 @@
             this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.janelasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alinharVerticalmenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alinharHorizontalmenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.organizarIconesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cascataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.saudacaoToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -63,6 +68,7 @@
             this.arquivoToolStripMenuItem,
             this.cadastrosToolStripMenuItem,
             this.relatoriosToolStripMenuItem,
+            this.janelasToolStripMenuItem,
             this.ajudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -183,6 +189,45 @@
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
+            // janelasToolStripMenuItem
+            // 
+            this.janelasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.alinharVerticalmenteToolStripMenuItem,
+            this.alinharHorizontalmenteToolStripMenuItem,
+            this.organizarIconesToolStripMenuItem,
+            this.cascataToolStripMenuItem});
+            this.janelasToolStripMenuItem.Name = "janelasToolStripMenuItem";
+            this.janelasToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.janelasToolStripMenuItem.Text = "Janelas";
+            // 
+            // alinharVerticalmenteToolStripMenuItem
+            // 
+            this.alinharVerticalmenteToolStripMenuItem.Name = "alinharVerticalmenteToolStripMenuItem";
+            this.alinharVerticalmenteToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.alinharVerticalmenteToolStripMenuItem.Text = "Alinhar Verticalmente";
+            this.alinharVerticalmenteToolStripMenuItem.Click += new System.EventHandler(this.alinharVerticalmenteToolStripMenuItem_Click);
+            // 
+            // alinharHorizontalmenteToolStripMenuItem
+            // 
+            this.alinharHorizontalmenteToolStripMenuItem.Name = "alinharHorizontalmenteToolStripMenuItem";
+            this.alinharHorizontalmenteToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.alinharHorizontalmenteToolStripMenuItem.Text = "Alinhar Horizontalmente";
+            this.alinharHorizontalmenteToolStripMenuItem.Click += new System.EventHandler(this.alinharHorizontalmenteToolStripMenuItem_Click);
+            // 
+            // organizarIconesToolStripMenuItem
+            // 
+            this.organizarIconesToolStripMenuItem.Name = "organizarIconesToolStripMenuItem";
+            this.organizarIconesToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.organizarIconesToolStripMenuItem.Text = "Organizar Icones";
+            this.organizarIconesToolStripMenuItem.Click += new System.EventHandler(this.organizarIconesToolStripMenuItem_Click);
+            // 
+            // cascataToolStripMenuItem
+            // 
+            this.cascataToolStripMenuItem.Name = "cascataToolStripMenuItem";
+            this.cascataToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.cascataToolStripMenuItem.Text = "Cascata";
+            this.cascataToolStripMenuItem.Click += new System.EventHandler(this.cascataToolStripMenuItem_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -235,6 +280,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PrincipalForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -275,6 +321,11 @@
         private System.Windows.Forms.ToolStripStatusLabel horaToolStripStatusLabel3;
         private System.Windows.Forms.Timer horaTimer;
         private System.Windows.Forms.ToolStripMenuItem alunosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem janelasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alinharVerticalmenteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alinharHorizontalmenteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem organizarIconesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cascataToolStripMenuItem;
     }
 }
 

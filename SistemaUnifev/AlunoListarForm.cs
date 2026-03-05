@@ -30,5 +30,10 @@ namespace SistemaUnifev
             List<Aluno> alunos = alunoDAO.ListarFake(30);
             dataGridView1.DataSource = alunos;
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

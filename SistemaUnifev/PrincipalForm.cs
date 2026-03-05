@@ -93,7 +93,29 @@ namespace SistemaUnifev
         private void alunosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AlunoListarForm alunoListarForm = new AlunoListarForm();
-            alunoListarForm.ShowDialog();
+            alunoListarForm.MdiParent = this;
+            alunoListarForm.Show();
+            alunoListarForm.WindowState = FormWindowState.Maximized;
+        }
+
+        private void alinharVerticalmenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void alinharHorizontalmenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void organizarIconesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.ArrangeIcons);
+        }
+
+        private void cascataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.Cascade);
         }
     }
 }
